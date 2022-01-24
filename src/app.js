@@ -65,7 +65,7 @@ function displayTemperature(response){
     mainTemp.innerHTML = Math.round(response.data.main.temp);
 
     let city = document.querySelector("#location");
-    city.innerHTML = response.data.name;
+    city.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
 
     let status = document.querySelector("#status");
     status.innerHTML = response.data.weather[0].main;
