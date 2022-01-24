@@ -40,6 +40,8 @@ function displayTemperature(response){
     let icon = document.querySelector("#icon");
     icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     icon.setAttribute("alt",response.data.weather[0].description);
+
+    cTemp = response.data.main.temp;
 }
 function search(city){
 let apiKey = "d3e02cfab692a13c33a6d6d6aec2acb0";
@@ -52,8 +54,36 @@ function handleSearch(event){
     let cityInput = document.querySelector("#city-input");
     search(cityInput.value);
 }
+function displayFahrenheit(event){
+    event.preventDefault();
+    let mainTemp = document.querySelector("#main-temp");
+    //remove active class from celsius ink
+    cLink.classList.remove("active");
+    fLink.classList.add("active");
+    let fTemp = (cTemp * 9/5) + 32;
+    mainTemp.innerHTML = Math.round(fTemp);
+}
+function displayCelsius(event){
+    event.preventDefault();
+        //remove active class from celsius ink
+        cLink.classList.add("active");
+        fLink.classList.remove("active");
+    let mainTemp = document.querySelector("#main-temp");
+    mainTemp.innerHTML = Math.round(cTemp);
+}
 
-search("San Francisco");
+//global variables
+
+
+let cTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSearch);
+
+let fLink = document.querySelector("#f-link");
+fLink.addEventListener("click", displayFahrenheit);
+
+let cLink = document.querySelector("#c-link");
+cLink.addEventListener("click", displayCelsius);
+
+search("San Francisco");
