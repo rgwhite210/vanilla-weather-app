@@ -1,16 +1,28 @@
 body {
     padding-top: 20px;
     font-family: sans-serif;
+    background: -webkit-linear-gradient(
+        to right,
+        #61045f,
+        #aa076b
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #61045f,
+        #aa076b
+      );
 }
 .weather-app-wrapper{
     max-width: 600px;
     margin: 0 auto;
+    
 }
 .weather-app{
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #dadde1;
+    background-color: white;
     border-radius: 10px;
 }
 .overview{
@@ -64,6 +76,8 @@ li {
 .search-btn{
     background-color: rgb(72, 37, 117);
     border-color: rgb(72, 37, 117);
+    font-size: 15px;
+    margin-left: ;
 }
 
 .weather-temp .active {
@@ -84,4 +98,21 @@ li {
 }
 footer {
 margin-top: 10px;
+color: white;
 }
+.disclaimer{
+    color: grey;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+a.footerLink:link {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  a.footerLink:visited {
+    color: rgb(238, 202, 247);
+    font-weight: bold;
+  }
