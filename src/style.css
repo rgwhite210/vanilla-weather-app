@@ -79,6 +79,10 @@ li {
     font-size: 15px;
     margin-left: ;
 }
+.btn:hover {
+    background-color: #230c33;
+    border-color: #230c33;
+}
 
 .weather-temp .active {
     color: black;
@@ -115,7 +119,7 @@ a.footerLink:link {
     
   }
   a.footerLink:visited {
-    color: rgb(238, 202, 247);
+    color: rgb(235, 168, 137);
     font-weight: bold;
     text-decoration: none;
   }
