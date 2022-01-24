@@ -26,21 +26,25 @@ function displayTemperature(response){
     city.innerHTML = response.data.name;
 
     let status = document.querySelector("#status");
-    status.innerHTML = response.data.weather[0].description;
+    status.innerHTML = response.data.weather[0].main;
 
     let humidity = document.querySelector("#humidity");
     humidity.innerHTML = response.data.main.humidity;
 
     let wind = document.querySelector("#wind");
-    wind.innerHTML = response.data.wind.speed;
+    wind.innerHTML = Math.round(response.data.wind.speed);
 
     let date = document.querySelector("#date");
     date.innerHTML = formatDate(response.data.dt * 1000);
-    
+
+    let icon = document.querySelector("#icon");
+    icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    icon.setAttribute("alt",response.data.weather[0].description);
 }
 
 let apiKey = "d3e02cfab692a13c33a6d6d6aec2acb0";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
+let city = "San Francisco"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 
 console.log(apiUrl);
