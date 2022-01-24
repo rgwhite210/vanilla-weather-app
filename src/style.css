@@ -57,6 +57,11 @@ li {
     font-weight: 100;
     line-height: 19px;
     padding: 0px;
-
-
+}
+.searchForm{
+    margin-bottom: 20px;
+}
+.search-btn{
+    background-color: rgb(72, 37, 117);
+    border-color: rgb(72, 37, 117);
 }
