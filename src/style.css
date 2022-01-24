@@ -76,9 +76,12 @@ li {
     text-decoration: none;
 }
 .weather-forecast{
-    margin-top: 20px;
+    margin-top: 25px;
     color: rgb(71, 71, 71);
     text-align: center;
-    margin-left: 50px;
-    margin-right: 0;
+    font-size: 18px;
+
+}
+footer {
+margin-top: 10px;
 }
