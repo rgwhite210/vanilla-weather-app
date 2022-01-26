@@ -73,11 +73,12 @@ li {
 .searchForm{
     margin-bottom: 20px;
 }
+
 .search-btn{
     background-color: rgb(72, 37, 117);
     border-color: rgb(72, 37, 117);
     font-size: 15px;
-    margin-left: ;
+    max-width: 100%;
 }
 .btn:hover {
     background-color: #230c33;
@@ -123,3 +124,5 @@ a.footerLink:link {
     font-weight: bold;
     text-decoration: none;
   }
+
+  
